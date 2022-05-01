@@ -14,5 +14,8 @@ public class While44 {
             n = n / 3;
         }
         System.out.println(n == 1);
+        System.out.println(n == 2);
+
+
     }
 }
