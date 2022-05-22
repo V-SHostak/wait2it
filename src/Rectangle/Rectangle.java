@@ -1,10 +1,10 @@
 package Rectangle;
 
 public class Rectangle {
-    double height;
-    double width;
-    double area;
-    double perimeter;
+    private double height;
+    private double width;
+    private double area;
+    private double perimeter;
 
     public Rectangle(double ht, double w)
     {
@@ -12,6 +12,14 @@ public class Rectangle {
         width = w;
         calculateArea();
         calculatePerimeter();
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public double getWidth() {
+        return width;
     }
 
     public Rectangle()
@@ -34,8 +42,8 @@ public class Rectangle {
 
     public void printResult()
     {
-        System.out.println("Height = " + height);
-        System.out.println("Width = " + width);
+        System.out.println("Height = " + getHeight());
+        System.out.println("Width = " + getWidth());
         System.out.println("The area of the rectangle = " + area);
         System.out.println("The perimeter of the rectangle = " + perimeter);
     }
