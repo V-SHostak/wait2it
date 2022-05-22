@@ -17,13 +17,13 @@ public class RobotMain {
 
         System.out.println("----------------------------");
 
-        Robot [] array = new Robot[4];
+        Robot[] array = new Robot[4];
         array[0] = robot;
         array[1] = coffeRobot;
         array[2] = robotDancer;
         array[3] = robotCoocker;
 
-        for (int i=0; i<4; i++){
+        for (int i = 0; i < 4; i++) {
             array[i].work();
         }
     }

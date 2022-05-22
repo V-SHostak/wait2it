@@ -6,8 +6,7 @@ public class Rectangle {
     private double area;
     private double perimeter;
 
-    public Rectangle(double ht, double w)
-    {
+    public Rectangle(double ht, double w) {
         height = ht;
         width = w;
         calculateArea();
@@ -22,26 +21,22 @@ public class Rectangle {
         return width;
     }
 
-    public Rectangle()
-    {
+    public Rectangle() {
         height = 3;
         width = 2;
         calculateArea();
         calculatePerimeter();
     }
 
-    public void calculateArea()
-    {
+    public void calculateArea() {
         area = height * width;
     }
 
-    public void calculatePerimeter()
-    {
-        perimeter = (height + width)*2;
+    public void calculatePerimeter() {
+        perimeter = (height + width) * 2;
     }
 
-    public void printResult()
-    {
+    public void printResult() {
         System.out.println("Height = " + getHeight());
         System.out.println("Width = " + getWidth());
         System.out.println("The area of the rectangle = " + area);
