@@ -2,41 +2,23 @@ package Car;
 
 public class WheelCar {
 
-    private int increaseSizeWheel;
     private int sizeWheel;
+    private int increaseSizeWheel;
+    private int resultSizeWheel;
 
-    public WheelCar(int increaseSizeWheel, int sizeWheel) {
+    public WheelCar(int sizeWheel, int increaseSizeWheel) {
+        this.sizeWheel = sizeWheel;
         this.increaseSizeWheel = increaseSizeWheel;
-        this.sizeWheel = sizeWheel;
+        calculateWheelCar();
     }
 
-    public WheelCar() {
-
-    }
-
-    public int getSizeWheel() {
-        return sizeWheel;
-    }
-
-    public void setSizeWheel(int sizeWheel) {
-        this.sizeWheel = sizeWheel;
+    public void calculateWheelCar() {
+        resultSizeWheel = sizeWheel * increaseSizeWheel;
     }
 
     @Override
     public String toString() {
-        return "WheelCar{" +
-                "sizeWheel=" + sizeWheel +
-                '}';
-    }
-
-    public WheelCar(int sizeWheel) {
-        this.sizeWheel = sizeWheel;
-    }
-
-    static int sizeWheel(int sizeWheel, int increaseSizeWheel){
-        int resultSizeWheel = sizeWheel*increaseSizeWheel;
-
-       return resultSizeWheel;
+        return "Size wheel car = " + resultSizeWheel;
     }
 
 }

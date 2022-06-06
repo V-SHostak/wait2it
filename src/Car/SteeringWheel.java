@@ -1,38 +1,39 @@
 package Car;
 
 public class SteeringWheel {
-    private int sizeSteringWheel;
-    private int resultSteringWheel;
-    private String materialSteringWheel;
 
-    public SteeringWheel(int sizeSteringWheel, String materialSteringWheel) {
-        this.sizeSteringWheel = sizeSteringWheel;
-        this.materialSteringWheel = materialSteringWheel;
+    private int sizeSteeringWheel;
+    private int changeSteeringWheel;
+    private int result;
+
+    public SteeringWheel(int sizeSteringWheel, int changeSteringWheel) {
+        this.sizeSteeringWheel = sizeSteringWheel;
+        this.changeSteeringWheel = changeSteringWheel;
+        calculateSteeringWheel();
     }
 
-    public SteeringWheel() {
-
+    public int getSizeSteeringWheel() {
+        return sizeSteeringWheel;
     }
 
-    public int getSizeSteringWheel() {
-        return sizeSteringWheel;
+    public void setSizeSteeringWheel(int sizeSteeringWheel) {
+        this.sizeSteeringWheel = sizeSteeringWheel;
     }
 
-    public void setSizeSteringWheel(int sizeSteringWheel) {
-        this.sizeSteringWheel = sizeSteringWheel;
+    public int getChangeSteeringWheel() {
+        return changeSteeringWheel;
     }
 
-    public String getMaterialSteringWheel() {
-        return materialSteringWheel;
+    public void setChangeSteeringWheel(int changeSteeringWheel) {
+        this.changeSteeringWheel = changeSteeringWheel;
     }
 
-    public void setMaterialSteringWheel(String materialSteringWheel) {
-        this.materialSteringWheel = materialSteringWheel;
+    public void calculateSteeringWheel() {
+        result = sizeSteeringWheel + changeSteeringWheel;
     }
 
-    public void changeSize(int sizeSteringWheel){
-        resultSteringWheel = sizeSteringWheel + 5;
-        System.out.println("Size stering wheel " + resultSteringWheel + " centimeters");
+    @Override
+    public String toString() {
+        return "Size steering wheel = " + result ;
     }
-
 }
