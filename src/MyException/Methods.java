@@ -3,8 +3,6 @@ package MyException;
 public class Methods {
 
     public double result;
-    public double number1;
-    public double number2;
 
     private boolean comparison(double number1, double number2) throws IllegalAccessException {
         if (number1 < 0 && number2 < 0) {
@@ -50,13 +48,5 @@ public class Methods {
             result = number1 - number2;
         }
         return result;
-    }
-
-    @Override
-    public String toString() {
-        return "Methods{" +
-                "number1=" + number1 +
-                ", number2=" + number2 +
-                '}';
     }
 }
