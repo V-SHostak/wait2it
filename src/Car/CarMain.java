@@ -19,7 +19,5 @@ public class CarMain {
         CarBody newCarBody = new CarBody();
         System.out.println(newCarBody);
 
-
-
     }
 }

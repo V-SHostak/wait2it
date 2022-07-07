@@ -16,23 +16,23 @@ public class MyCalculator implements Numerable {
 
     @Override
     public double devide() {
-        return number1/number2;
+        return number1 / number2;
     }
 
     @Override
     public double minus() {
-        return number1-number2;
+        return number1 - number2;
     }
 
     @Override
     public double multiply() {
 
-        return number1*number2;
+        return number1 * number2;
     }
 
     @Override
     public double plus() {
-        return number1+number2;
+        return number1 + number2;
     }
 
     @Override

@@ -9,15 +9,16 @@ public class Fibonachi {
         int n = sc.nextInt();
         System.out.println(fibonachi(n));
     }
-    private static int fibonachi (int n) {
-        if (n==1){
+
+    private static int fibonachi(int n) {
+        if (n == 1) {
             return 0;
 
-        } else if (n==2){
+        } else if (n == 2) {
             return 1;
 
-        }else {
-            return  fibonachi(n-2)+fibonachi(n-1);
+        } else {
+            return fibonachi(n - 2) + fibonachi(n - 1);
         }
     }
 }
