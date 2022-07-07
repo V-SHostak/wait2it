@@ -2,38 +2,29 @@ package Car;
 
 public class SteeringWheel {
 
-    private int sizeSteeringWheel;
-    private int changeSteeringWheel;
-    private int result;
+    private double diameter;
 
-    public SteeringWheel(int sizeSteringWheel, int changeSteringWheel) {
-        this.sizeSteeringWheel = sizeSteringWheel;
-        this.changeSteeringWheel = changeSteringWheel;
-        calculateSteeringWheel();
+    public SteeringWheel(Double diameter) {
+        this.diameter = diameter;
     }
 
-    public int getSizeSteeringWheel() {
-        return sizeSteeringWheel;
+    public Double getDiameter() {
+        return diameter;
     }
 
-    public void setSizeSteeringWheel(int sizeSteeringWheel) {
-        this.sizeSteeringWheel = sizeSteeringWheel;
+    public void setDiameter(Double diameter) {
+        this.diameter = diameter;
     }
 
-    public int getChangeSteeringWheel() {
-        return changeSteeringWheel;
-    }
-
-    public void setChangeSteeringWheel(int changeSteeringWheel) {
-        this.changeSteeringWheel = changeSteeringWheel;
-    }
-
-    public void calculateSteeringWheel() {
-        result = sizeSteeringWheel + changeSteeringWheel;
+    public void changeDiameter() {
+        this.diameter = diameter*1.1;
+        System.out.println("New diameter is: " + getDiameter());
     }
 
     @Override
     public String toString() {
-        return "Size steering wheel = " + result ;
+        return "SteeringWheel{" +
+                "diameter=" + diameter +
+                '}';
     }
 }

@@ -4,20 +4,19 @@ public class CarMain {
 
     public static void main(String[] args) {
 
-        SteeringWheel steeringWheel = new SteeringWheel(32, 3);
-        System.out.println(steeringWheel);
+        CarBody carBody = new CarBody("white", "cupe");
+        SteeringWheel steeringWheel = new SteeringWheel(40.0);
+        WheelCar wheels = new WheelCar(80, "snow");
 
-        WheelCar resultWheelCar = new WheelCar(12,2);
-        System.out.println(resultWheelCar);
+        Car car1 = new Car(5,"Daewoo", carBody, steeringWheel, wheels);
 
-        System.out.println("-------------------------");
+        System.out.println(car1);
 
-        System.out.println("Enter model car: ");
-        Car newCar = new Car();
-        System.out.println(newCar);
-        System.out.println("Body car: ");
-        CarBody newCarBody = new CarBody();
-        System.out.println(newCarBody);
+        carBody.setColor("red");
+        steeringWheel.setDiameter(50.0);
+        wheels.setType("summer");
 
+        System.out.println(car1);
+        car1.getSteeringWheel().changeDiameter();
     }
 }

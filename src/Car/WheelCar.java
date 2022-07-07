@@ -2,23 +2,35 @@ package Car;
 
 public class WheelCar {
 
-    private int sizeWheel;
-    private int increaseSizeWheel;
-    private int resultSizeWheel;
+    private Integer diameter;
+    private String type;
 
-    public WheelCar(int sizeWheel, int increaseSizeWheel) {
-        this.sizeWheel = sizeWheel;
-        this.increaseSizeWheel = increaseSizeWheel;
-        calculateWheelCar();
+    public WheelCar(Integer diameter, String type) {
+        this.diameter = diameter;
+        this.type = type;
     }
 
-    public void calculateWheelCar() {
-        resultSizeWheel = sizeWheel * increaseSizeWheel;
+    public Integer getDiameter() {
+        return diameter;
+    }
+
+    public void setDiameter(Integer diameter) {
+        this.diameter = diameter;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     @Override
     public String toString() {
-        return "Size wheel car = " + resultSizeWheel;
+        return "WheelCar{" +
+                "diameter=" + diameter +
+                ", type='" + type + '\'' +
+                '}';
     }
-
 }

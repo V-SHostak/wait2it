@@ -1,33 +1,68 @@
 package Car;
 
-import java.util.Scanner;
-
 public class Car {
+    Integer age;
+    String model;
+    CarBody carBody;
+    SteeringWheel steeringWheel;
+    WheelCar wheelCar;
 
-    Scanner sc = new Scanner(System.in);
-    String modelCar = sc.next();
-
-    public String getModelCar() {
-        return modelCar;
+    public Car(Integer age, String model, CarBody carBody, SteeringWheel steeringWheel, WheelCar wheelCar) {
+        this.age = age;
+        this.model = model;
+        this.carBody = carBody;
+        this.steeringWheel = steeringWheel;
+        this.wheelCar = wheelCar;
     }
 
-    public void setModelCar(String modelCar) {
-        this.modelCar = modelCar;
+    public Integer getAge() {
+        return age;
     }
 
-    public Car(String modelCar) {
-        this.modelCar = modelCar;
+    public void setAge(Integer age) {
+        this.age = age;
     }
 
-    SteeringWheel newSteeringWheel = new SteeringWheel(3,6);
+    public String getModel() {
+        return model;
+    }
 
-    WheelCar newWheelCar = new WheelCar(34,2);
+    public void setModel(String model) {
+        this.model = model;
+    }
 
-    public Car() {
+    public CarBody getCarBody() {
+        return carBody;
+    }
+
+    public void setCarBody(CarBody carBody) {
+        this.carBody = carBody;
+    }
+
+    public SteeringWheel getSteeringWheel() {
+        return steeringWheel;
+    }
+
+    public void setSteeringWheel(SteeringWheel steeringWheel) {
+        this.steeringWheel = steeringWheel;
+    }
+
+    public WheelCar getWheelCar() {
+        return wheelCar;
+    }
+
+    public void setWheelCar(WheelCar wheelCar) {
+        this.wheelCar = wheelCar;
     }
 
     @Override
     public String toString() {
-        return "Car model: " + modelCar + ". " + newSteeringWheel + ". " + newWheelCar;
+        return "Car{" +
+                "age=" + age +
+                ", model='" + model + '\'' +
+                ", carBody=" + carBody +
+                ", steeringWheel=" + steeringWheel +
+                ", wheelCar=" + wheelCar +
+                '}';
     }
 }

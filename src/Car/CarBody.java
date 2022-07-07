@@ -1,30 +1,37 @@
 package Car;
 
-import java.util.Scanner;
-
 public class CarBody {
 
-    public CarBody(String shapeBodyCar) {
-        this.shapeBodyCar = shapeBodyCar;
+    private String color;
+    private String type;
+
+    public CarBody(String color, String type) {
+        this.color = color;
+        this.type = type;
     }
 
-    public CarBody() {
-
+    public String getColor() {
+        return color;
     }
 
-    public String getShapeBodyCar() {
-        return shapeBodyCar;
+    public void setColor(String color) {
+        this.color = color;
     }
 
-    public void setShapeBodyCar(String shapeBodyCar) {
-        this.shapeBodyCar = shapeBodyCar;
+    public String getType() {
+        return type;
     }
 
-    Scanner sc = new Scanner(System.in);
-    String shapeBodyCar = sc.next();
+    public void setType(String type) {
+        this.type = type;
+    }
 
     @Override
     public String toString() {
-        return "Shape body car: " + shapeBodyCar;
+        return "CarBody{" +
+                "color='" + color + '\'' +
+                ", type='" + type + '\'' +
+                '}';
     }
+
 }
