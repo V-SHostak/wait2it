@@ -18,6 +18,5 @@ public class UserMain {
         for (User us : users) {
             System.out.println(us.userName + ", " + us.userAge + ", " + us.emailAddress);
         }
-
     }
 }
