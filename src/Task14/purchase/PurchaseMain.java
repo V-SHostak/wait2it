@@ -1,9 +1,6 @@
 package Task14.purchase;
 
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 public class PurchaseMain {
 
@@ -28,12 +25,13 @@ public class PurchaseMain {
         }
 
         System.out.println("-----------------------------------------------");
-        System.out.println("Tree set");
+        System.out.println("Tree set quantity");
 
         Set<Purchase> hashSetToTreeSet = new TreeSet<>(purchaseSet);
         for (Purchase treeSet : hashSetToTreeSet) {
             System.out.println(treeSet);
         }
+
 
     }
 

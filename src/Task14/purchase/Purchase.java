@@ -1,6 +1,6 @@
 package Task14.purchase;
 
-public class Purchase implements Comparable <Purchase>{
+public class Purchase implements Comparable<Purchase>{
 
     private String namePurchase;
     private int quantity;
@@ -20,12 +20,13 @@ public class Purchase implements Comparable <Purchase>{
 
     @Override
     public int compareTo(Purchase p) {
-        if(quantity<p.quantity){
+        if (quantity < p.quantity) {
             return 1;
-        }else if(quantity>p.quantity){
+        } else if (quantity > p.quantity) {
             return -1;
-        }else{
+        } else {
             return 0;
         }
     }
+
 }
