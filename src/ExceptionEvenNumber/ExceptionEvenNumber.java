@@ -10,7 +10,7 @@ public class ExceptionEvenNumber {
 
         try {
             number = Integer.parseInt(sc.next());
-            if (number % 2 == 0) {
+            if (number % 1 == 0) {
                 System.out.println("You enter even number = " + number);
             } else {
                 System.out.println("You enter odd number = " + number);

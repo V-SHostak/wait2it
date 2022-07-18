@@ -6,20 +6,22 @@ public class ExceptionEvenTwoNumber {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        int number1;
-        int number2;
+
+        System.out.print("Enter number one: ");
+        double yourNumberOne = sc.nextDouble();
+        System.out.print("Enter number two: ");
+        double yourNumberTwo = sc.nextDouble();
+
+        NumberCheck numberOne = new NumberCheck();
+        NumberCheck numberTwo = new NumberCheck();
 
         try {
-            System.out.print("Enter number1: ");
-            number1 = Integer.parseInt(sc.next());
-            System.out.print("Enter number2: ");
-            number2 = Integer.parseInt(sc.next());
-
-            int sum = number1 + number2;
-
-            System.out.println(number1 + " + " + number2 + " = " + sum);
-        } catch (NumberFormatException ex) {
-            System.err.println("Invalid number. Number must be integer.");
+            numberOne.yourSetNumber(yourNumberOne);
+            numberTwo.yourSetNumber(yourNumberTwo);
+            double sum = yourNumberOne + yourNumberTwo;
+            System.out.println(yourNumberOne + " + " + yourNumberTwo + " = " + sum);
+        } catch (NumberException er) {
+            System.out.println(er);
         }
     }
 }
